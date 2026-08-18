@@ -1,0 +1,10 @@
+# Security: NEVER commit API keys
+.env
+
+# Virtual Environment
+.venv/
+.venv1/
+__pycache__/
+
+# Large PDF files (Not needed on GitHub since ChromaDB holds the vectors)
+mediation-ai-tool/data/*.pdf

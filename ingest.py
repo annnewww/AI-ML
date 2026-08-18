@@ -53,9 +53,20 @@ def build_vector_database():
 
     print("\nStep 2: Splitting text into chunks...")
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1200,
-        chunk_overlap=200,
-        separators=["\n\n", "\n", " ", ""]
+        #chunk_size=1200,
+        chunk_size=2000,
+        #chunk_overlap=200,
+        chunk_overlap=300,
+        separators=[
+            "\n## ",      # Markdown H2
+            "\n### ",     # Markdown H3
+            "\n\n",       # Paragraph breaks
+            "\n- ",       # Bullet points
+            "\n1. ",      # Numbered lists
+            "\n",         # Line breaks
+            " ",
+            ""
+        ]
     )
     chunks = text_splitter.split_documents(documents)
     print("Generated {len(chunks)} individual text chunks.")
