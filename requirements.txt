@@ -8,5 +8,4 @@ groq
 python-dotenv
 sentence-transformers
 chromadb
-pickle
 bm_25
