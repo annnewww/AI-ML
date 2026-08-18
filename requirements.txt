@@ -8,4 +8,4 @@ groq
 python-dotenv
 sentence-transformers
 chromadb
-bm_25
+rank_bm25
